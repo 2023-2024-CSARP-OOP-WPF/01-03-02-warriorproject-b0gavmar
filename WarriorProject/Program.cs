@@ -12,8 +12,16 @@ namespace WarriorProject
         private int x; 
         private int y;
 
-        public int Xxd { get { return x; } }
-        public int Yxd { get { return y; } }
+        public int Xxd 
+        {
+            get{ return x; }
+            set{ x = value; }
+        }
+        public int Yxd
+        {
+            get { return x; }
+            set { x = value; }
+        }
 
         public Position(int x, int y)
         {
@@ -30,29 +38,31 @@ namespace WarriorProject
 
     public class Warrior
     {
-        public string name;
-        public Position position;
+        private string name;
+        private Position Position;
+
+        private Position positionxd { get => Position; }
 
         public Warrior(string name, Position p)
         {
             this.name = name;
-            this.position = p;
+            this.Position = p;
         }
 
         public void MoveHorizontal(int distance)
         {
-            this.position.Xxd += distance;
+            Position.Xxd += distance;
 
         }
 
         public void MoveVertical(int distance)
         {
-
+            Position.Yxd += distance;
         }
 
         public void ToConsole()
         {
-            Console.WriteLine($"");
+            Console.WriteLine($"{name}, position ({this.Position.Xxd},{this.Position.Yxd})");
         }
     }
 
