@@ -19,8 +19,8 @@ namespace WarriorProject
         }
         public int Yxd
         {
-            get { return x; }
-            set { x = value; }
+            get { return y; }
+            set { y = value; }
         }
 
         public Position(int x, int y)
@@ -40,8 +40,6 @@ namespace WarriorProject
     {
         private string name;
         private Position Position;
-
-        private Position positionxd { get => Position; }
 
         public Warrior(string name, Position p)
         {
